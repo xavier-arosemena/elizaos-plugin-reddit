@@ -97,6 +97,27 @@ export interface PluginConfig {
   // Anti-ban
   minDelayMs: number;
   maxDelayMs: number;
+
+  // ==========================================================================
+  // Wider Discovery Layers (Issue #8) — optional, for backward compatibility
+  // ==========================================================================
+
+  /** Enable commenter discovery: upvote posts from users who commented on scout-identified posts (default: true) */
+  commenterDiscoveryEnabled?: boolean;
+  /** Maximum number of commenters to check per scout post (default: 5) */
+  maxCommentersPerPost?: number;
+  /** Maximum posts to fetch per discovered commenter (default: 3) */
+  maxPostsPerCommenter?: number;
+
+  /** Enable keyword discovery: search for relevant posts using keywords during the upvote cycle (default: true) */
+  keywordDiscoveryEnabled?: boolean;
+  /** Maximum number of keywords to use in discovery search (default: 3) */
+  keywordDiscoveryMaxKeywords?: number;
+
+  /** Enable subreddit feed discovery: upvote posts from the same subreddit as scout-identified posts (default: false) */
+  subredditDiscoveryEnabled?: boolean;
+  /** Maximum number of posts to fetch per subreddit (default: 5) */
+  maxPostsPerSubreddit?: number;
 }
 
 /** Search cycle state (disk-persisted) */
@@ -117,6 +138,13 @@ export interface UpvoteState {
   totalUpvoted: number;
   upvotedPostIds: string[];
   rollingWindow: Array<{ postId: string; timestamp: number }>;
+
+  // Rolling 24h window (Issue #8)
+  windowStart: number;
+  /** ISO timestamp of last UPVOTE cycle */
+  lastCycleAt: string;
+  /** Current cycle number in this 24h window */
+  cycleNumber: number;
 }
 
 /** Reply state (disk-persisted) */
