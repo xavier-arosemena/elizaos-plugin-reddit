@@ -387,6 +387,8 @@ async function deliverToArchon(
 
   // Format the delivery text
   const lines: string[] = [
+    `[SCOUT DELIVERY]`,
+    ``,
     `## 🔴 Reddit Discovery Cycle`,
     ``,
     `Found **${opportunities.length}** opportunities across 3 discovery tiers:`,
