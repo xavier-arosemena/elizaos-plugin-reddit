@@ -105,6 +105,9 @@ In your character JSON's `"plugins"` array:
 | `REDDIT_MAX_OPPORTUNITIES` | ❌ | `10` | Max opportunities per cycle |
 | `REDDIT_MIN_DELAY_MS` | ❌ | `2000` | Min delay between API calls |
 | `REDDIT_MAX_DELAY_MS` | ❌ | `8000` | Max delay between API calls |
+| `REDDIT_SCOUT_ENABLED` | ❌ | `true` | Enable/disable Reddit scout cycle (controlled by intensity config) |
+| `REDDIT_POST_ENABLED` | ❌ | `true` | Enable/disable Reddit posting cycle (controlled by intensity config) |
+| `REDDIT_INBOX_ENABLED` | ❌ | `true` | Enable/disable Reddit inbox polling cycle (controlled by intensity config) |
 
 ### Getting Reddit API Credentials
 
