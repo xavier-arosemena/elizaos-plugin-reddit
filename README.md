@@ -5,6 +5,8 @@
 [![GitHub](https://img.shields.io/badge/github-elizaos--plugin--reddit-blue)](https://github.com/xavier-arosemena/elizaos-plugin-reddit)
 
 ---
+This project is currently being updated.
+---
 
 ## Overview
 
