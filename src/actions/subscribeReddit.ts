@@ -102,6 +102,8 @@ export const subscribeRedditAction: Action = {
     "Takes a list of subreddit names (with optional action prefix '+sub' or '-unsub'). " +
     "State is persisted to disk for resumption across restarts.",
 
+  examples: [],
+
   validate: async (runtime: IAgentRuntime): Promise<boolean> => {
     const clientId = runtime.getSetting("REDDIT_CLIENT_ID");
     const clientSecret = runtime.getSetting("REDDIT_CLIENT_SECRET");

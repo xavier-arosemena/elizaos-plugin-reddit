@@ -475,6 +475,8 @@ export const searchRedditAction: Action = {
   description:
     "Run a full Reddit discovery cycle: keyword search (Tier 1), subreddit feed monitoring (Tier 2), and inbox polling (Tier 3). Delivers scored opportunities to the Archon agent.",
 
+  examples: [],
+
   validate: async (runtime: IAgentRuntime): Promise<boolean> => {
     const clientId = runtime.getSetting("REDDIT_CLIENT_ID");
     const clientSecret = runtime.getSetting("REDDIT_CLIENT_SECRET");
