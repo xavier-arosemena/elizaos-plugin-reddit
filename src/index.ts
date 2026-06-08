@@ -34,6 +34,6 @@ export const redditPlugin: Plugin = {
 };
 
 // Plugin loaded log
-elizaLogger.info(`[REDDIT-PLUGIN] Reddit plugin loaded — ${redditPlugin.actions.length} actions registered`);
+elizaLogger.info(`[REDDIT-PLUGIN] Reddit plugin loaded — ${redditPlugin.actions?.length ?? 0} actions registered`);
 
 export default redditPlugin;

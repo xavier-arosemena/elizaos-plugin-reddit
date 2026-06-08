@@ -125,6 +125,8 @@ export const replyRedditAction: Action = {
     "Uses ElizaOS LLM to generate context-aware replies. " +
     "State is persisted to disk for resumption across restarts.",
 
+  examples: [],
+
   validate: async (runtime: IAgentRuntime): Promise<boolean> => {
     const clientId = runtime.getSetting("REDDIT_CLIENT_ID");
     const clientSecret = runtime.getSetting("REDDIT_CLIENT_SECRET");
@@ -310,10 +312,10 @@ async function generateReply(
     const response = await generateMessageResponse({
       runtime,
       context: prompt,
-      modelClass: ModelClass.TEXT_SMALL,
+      modelClass: ModelClass.SMALL,
     });
 
-    const replyText = response?.content?.text ?? response?.text ?? response?.content ?? null;
+    const replyText = response?.text ?? null;
 
     if (!replyText || typeof replyText !== "string" || replyText.trim().length === 0) {
       elizaLogger.warn(`[REDDIT-PLUGIN] LLM generated empty reply`);
