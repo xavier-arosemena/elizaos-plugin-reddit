@@ -127,6 +127,7 @@ export interface SearchCycleState {
   keywordsCache: string[];
   keywordsCacheTime: number;
   processedPostIds: string[];
+  lastTier1Time: number;
   lastTier2Time: number;
   lastTier3Time: number;
 }
