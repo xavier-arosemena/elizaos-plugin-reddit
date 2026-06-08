@@ -48,6 +48,7 @@ async function loadSearchState(runtime: IAgentRuntime): Promise<SearchCycleState
     keywordsCache: [],
     keywordsCacheTime: 0,
     processedPostIds: [],
+    lastTier1Time: 0,
     lastTier2Time: 0,
     lastTier3Time: 0,
   };
