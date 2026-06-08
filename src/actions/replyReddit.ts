@@ -215,6 +215,9 @@ export const replyRedditAction: Action = {
             contextBody = details.post.selftext || details.post.title;
             contextSubreddit = details.post.subreddit;
           }
+          else {
+            elizaLogger.warn(`[REDDIT-PLUGIN] Could not fetch context for ${fullname} — generating reply without context`);
+          }
         }
 
         // Generate reply using LLM
