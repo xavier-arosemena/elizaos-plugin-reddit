@@ -325,6 +325,7 @@ async function parseTargetList(runtime: IAgentRuntime): Promise<{ subreddits: st
     const path = config.targetListPath;
     if (!fs.existsSync(path)) {
       elizaLogger.warn(`[REDDIT-PLUGIN] Target list not found at ${path} — using defaults`);
+      elizaLogger.info(`[REDDIT-PLUGIN] Fallback defaults: subreddits=[europe,worldnews,technology], keywords=[europe,eu,european union]`);
       // Default targets if no file exists
       subreddits.push("europe", "worldnews", "technology");
       keywords.push("europe", "eu", "european union");
