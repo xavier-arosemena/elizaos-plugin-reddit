@@ -533,7 +533,7 @@ export const searchRedditAction: Action = {
     searchState.cycleCount++;
     searchState.processedPostIds = Array.from(processedIds).slice(-1000); // keep last 1000
 
-    if (tier1Results.length > 0) searchState.lastTier2Time = Date.now();
+    if (tier1Results.length > 0) searchState.lastTier1Time = Date.now();
     if (tier2Results.length > 0) searchState.lastTier2Time = Date.now();
     if (tier3Results.length > 0) searchState.lastTier3Time = Date.now();
 
