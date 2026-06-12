@@ -1,8 +1,8 @@
-# @elizaos/plugin-reddit
+# elizaos-plugin-reddit-search
 
 > ElizaOS plugin for Reddit integration — search, engage, and manage Reddit interactions autonomously.
 
-[![GitHub](https://img.shields.io/badge/github-elizaos--plugin--reddit-blue)](https://github.com/xavier-arosemena/elizaos-plugin-reddit)
+[![GitHub](https://img.shields.io/badge/github-elizaos--plugin--reddit--search-blue)](https://github.com/xavier-arosemena/elizaos-plugin-reddit-search)
 
 ---
 
@@ -54,8 +54,8 @@ This plugin enables ElizaOS agents to interact with Reddit through four composab
 ### 1. Clone the repository
 
 ```bash
-git clone git@github.com:xavier-arosemena/elizaos-plugin-reddit.git
-cd elizaos-plugin-reddit
+git clone git@github.com:xavier-arosemena/elizaos-plugin-reddit-search.git
+cd elizaos-plugin-reddit-search
 npm install
 ```
 
@@ -66,14 +66,14 @@ Edit your `pnpm-workspace.yaml` to include the plugin:
 ```yaml
 packages:
   - "plugins/*"
-  - "elizaos-plugin-reddit"   # add this line
+  - "elizaos-plugin-reddit-search"   # add this line
 ```
 
 Add the dependency to your engine's `package.json`:
 
 ```json
 "dependencies": {
-  "@elizaos/plugin-reddit": "workspace:*"
+  "elizaos-plugin-reddit-search": "workspace:*"
 }
 ```
 
@@ -83,7 +83,7 @@ In your character JSON's `"plugins"` array:
 
 ```json
 "plugins": [
-  "@elizaos/plugin-reddit"
+  "elizaos-plugin-reddit-search"
 ]
 ```
 
@@ -99,7 +99,7 @@ In your character JSON's `"plugins"` array:
 | `REDDIT_CLIENT_SECRET` | ✅ | — | OAuth2 client secret |
 | `REDDIT_USERNAME` | ✅ | — | Bot account username |
 | `REDDIT_PASSWORD` | ✅ | — | Bot account password |
-| `REDDIT_USER_AGENT` | ❌ | `elizaos:plugin-reddit:v0.1.0` | Custom User-Agent string |
+| `REDDIT_USER_AGENT` | ❌ | `elizaos:plugin-reddit-search:v0.1.0` | Custom User-Agent string |
 | `REDDIT_MAX_UPVOTES_PER_DAY` | ❌ | `20` | Daily upvote limit (anti-ban) |
 | `REDDIT_MAX_UPVOTES_PER_CYCLE` | ❌ | `5` | Max upvotes per cron cycle |
 | `REDDIT_MAX_REPLIES_PER_DAY` | ❌ | `10` | Daily reply limit |
@@ -135,7 +135,7 @@ Reddit requires a descriptive User-Agent. The format should be:
 
 Example:
 ```
-elizaos:plugin-reddit:v0.1.0 (by /u/Least-Quiet-1305)
+elizaos:plugin-reddit-search:v0.1.0 (by /u/Least-Quiet-1305)
 ```
 
 ---
@@ -250,7 +250,7 @@ Note: `@elizaos/core` is a peer dependency — the project type-checks fully whe
 ### Project Structure
 
 ```
-elizaos-plugin-reddit/
+elizaos-plugin-reddit-search/
 ├── src/
 │   ├── actions/
 │   │   ├── searchReddit.ts    # 3-tier discovery action
