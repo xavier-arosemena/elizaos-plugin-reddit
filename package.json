@@ -1,10 +1,23 @@
 {
-  "name": "@elizaos/plugin-reddit",
+  "name": "elizaos-plugin-reddit-search",
   "version": "0.1.0",
+  "description": "ElizaOS plugin for Reddit integration — search, engage, and manage Reddit interactions autonomously",
   "type": "module",
   "main": "src/index.ts",
   "scripts": {
     "build": "tsc --noEmit"
+  },
+  "keywords": [
+    "elizaos",
+    "eliza",
+    "plugin",
+    "reddit",
+    "social",
+    "discovery"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xavier-arosemena/elizaos-plugin-reddit-search.git"
   },
   "peerDependencies": {
     "@elizaos/core": "0.1.9"
